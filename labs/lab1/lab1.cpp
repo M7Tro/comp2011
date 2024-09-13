@@ -31,10 +31,9 @@ int main() {
 
     // TODO 3: Fix the three lines below. They are not in the correct order.
     // Hint: Use Alt+Up/Down to move the current line(s) up or down.
-    cout << "Remaining balance: " << balance << " HKD." << endl;
     cout << "You decide to buy a notebook for 20 HKD." << endl;
     balance = balance - 20;
-
+    cout << "Remaining balance: " << balance << " HKD." << endl;
 
     cout << endl;
     cout << "Because you need money, you would like to sell your pencil." << endl;
@@ -46,8 +45,8 @@ int main() {
     // TODO 4: Fix the if statement below.
     // If the pencil's price is higher than 50, the selling fails.
     // Hint: To edit the same word in multiple places, select the word and use Ctrl+D / Cmd+D.
-    if (balance > 50)
-        cout << "The price " << balance << " is too high, you could not sell your pencil." << endl;
+    if (price > 50)
+        cout << "The price " << price << " is too high, you could not sell your pencil." << endl;
     else
         balance = balance + price;
 

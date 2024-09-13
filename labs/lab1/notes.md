@@ -23,3 +23,9 @@ VScode offers a cool feature with "select for compare" and "compare with selecte
 Command suggested for compilation: g++ -std=c++11 lab1.cpp -o lab1
 
 To edit the same word in multiple places, select the word and use Ctrl+D / Cmd+D.
+
+DS_Store — or Desktop Services Store — files for each folder. These files are useful for keeping track of metadata and folder settings, like folder view options, sort options, and icon size and position
+
+You can view the timeline of changes in VS Code using View -> Open View -> Timeline (gets cluttered with autosave)
+
+Anywhere on the file do a double-tap and press Format Document to ... format the document. It means making the source code less ugly with spaces, tabs/indentation. 
