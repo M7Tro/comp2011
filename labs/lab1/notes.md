@@ -18,7 +18,7 @@ Grading Scheme: 1 point for attendance, 1 point for a successful ZINC submission
 
 Cool stuff:
 
-VScode offers a cool feature with "select for compare" and "compare with selected"
+VScode offers a cool feature with "select for compare" and "compare with selected". It is convenient because it splits the screen and also highlits the lines with colors if there are differences between files.
 
 Command suggested for compilation: g++ -std=c++11 lab1.cpp -o lab1
 
@@ -29,3 +29,8 @@ DS_Store — or Desktop Services Store — files for each folder. These files ar
 You can view the timeline of changes in VS Code using View -> Open View -> Timeline (gets cluttered with autosave)
 
 Anywhere on the file do a double-tap and press Format Document to ... format the document. It means making the source code less ugly with spaces, tabs/indentation. 
+
+The command used for redirection of input and output for testing is quite cool and useful:
+    ./lab1 < ./testcase/input1.txt > myOutput1.txt
+
+The < and > symbols are redirection operators. They redirect readable/writeable streams of data. The the beginning part (./lab1) is the good old compilation command. 
