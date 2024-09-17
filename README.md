@@ -1,3 +1,5 @@
+Note: solutions to labs and assignments are intentionally not posted to not shared to not violate the honor code.
+
 The course vector means that the course consists of, per week,
 3 hours of lectures
 2 hours of lab excercises
