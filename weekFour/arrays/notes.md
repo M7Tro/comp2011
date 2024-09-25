@@ -67,3 +67,30 @@ To represent a character string by a 1D character array use end-marker '\0'
 A null character '\0' denotes an end of a char array. 
 
 If you have a function that accepts a char sequence string as a paremeter, you do not have to pass the length of the string. 
+
+An interesting way to count the length of a char string:
+    int i; for(i = 0; sequence[i] != '\0'; i++); cout << i;
+
+
+
+Reading C strings with cin: 
+
+cin will skip all the white  spaces before reading data of the required type until the next white space. 
+
+White spaces are ' ', '\t', '\n'. 
+
+For char x; cin >>x; and input like "   http ", the x value will be 'h'
+
+For char x [20]; cin >> x; "   http  " will result in x == "http" 
+
+cin is not good for multiple words or lines with newline. Instead, use cin.getline(char s[], int max-num-char, char terminator);
+
+cin.getline() will stop when either max-num-char-1 characters are read or the terminating character is seen. The terminating character is not read into the string. 
+
+The C-string terminating null character is automatically inserted at the end of the read string. 
+
+
+
+
+
+Default cin terminates the input once it sees a whitespace character. If you try to initialize a string with input and write 'My name is Sultan' only 'My' will be stored. 
