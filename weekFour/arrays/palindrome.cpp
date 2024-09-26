@@ -31,15 +31,17 @@ int main() {
     //The terminating character is not read into the string 
     //The input[] character array is where the inputted data is stored. 
 
-    const int MAX_LINE_LEN = 255; //defining the maximum number of characters
-    char wholeLine [MAX_LINE_LEN + 1]; //declaring the array to store the input 
+    /* const int MAX_LINE_LEN = 255; //defining the maximum number of characters
+    char wholeLine [MAX_LINE_LEN + 1]; //declaring the array to store the input. +1 is added to accomodate the null character at the end
     while(cin.getline(wholeLine, MAX_LINE_LEN, '\n') //input is terminated when new line is started
     || cin.gcount() == MAX_LINE_LEN) //terminate if the input reached max length 
     {
         cout << wholeLine << endl
         << boolalpha << palindrome(wholeLine) << endl;
         cin.clear(); //Clear the error if max number of characters is reached. 
-    }
+    } */
+
+
 
     return 0;
 }

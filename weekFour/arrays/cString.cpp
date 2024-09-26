@@ -1,3 +1,4 @@
+#include <cstring>
 #include <iostream>
 
 using namespace std;
@@ -19,6 +20,10 @@ int main() {
     //You can also youse double quotes:
     char lastname [20] = "Jamalebekov";
     cout << endl << lastname << endl;
+
+    char king [] = "Leonidas";
+
+    cout << endl  << "The string length of Leonidas is "<< strlen(king) << endl;
 
     return 0;
 }

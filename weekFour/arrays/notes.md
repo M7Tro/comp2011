@@ -94,3 +94,14 @@ The C-string terminating null character is automatically inserted at the end of 
 
 
 Default cin terminates the input once it sees a whitespace character. If you try to initialize a string with input and write 'My name is Sultan' only 'My' will be stored. 
+
+
+
+
+I still can't quite wrap my head around the C strings and the null character \0.
+
+I will do some more research on this. 
+
+There are two ways of working with strings in C++. The C-style and the string class. 
+
+Essentially, there are a few main things I need to understand. A character array can be initialized with "" and a '\0' character will be assigned in the end automatically. You can also explicitly define it with {} and add a '\0' in the end. When calculating the length of a char array with strlen(), it will not count '\0' as a character. So "hkust" initialized char array has the '\0' symbol at index 5 and the strlen is 5. 
