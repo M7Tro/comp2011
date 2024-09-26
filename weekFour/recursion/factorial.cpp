@@ -17,6 +17,18 @@ void factorial (int n){
     cout << "\nThe factorial of " << n << " is " << factorialRecursion(n, 1) << "\n\n";
 }
 
+/*
+    Solution from the lecture notes is more elegant. It does not require an external function:
+    
+    int factorial(int n){
+        if(n == 1){
+        return 1
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+*/
+
 int main() {
     int n;
     cout << "\nPlease provide a value for calculation of catorial: ";
