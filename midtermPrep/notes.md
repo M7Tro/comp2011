@@ -423,7 +423,7 @@ Lecture 8: Array - a collection of homogenous objects
 
     Or you can pass it a 1D array since elements are stored linearly in the memory anyway. 
 
-    When specifying an array in the formal list of a function, you must make sure that a function can understand what to expect. For a 2D array, you can't pass int array [][]. You must specify the second dimension size: int array [][3]; 
+    When specifying an array in the formal list of a function, you must make sure that a function can understand what to expect. For a 2D array, you can't pass int array [][]. You must specify the second dimension size: int array [][3]. And you also still need to specify size of the array in rows. 
 
     in C++, elements of a multi-dimensional array are stored in row-major order. Row by row. 
 
@@ -431,4 +431,82 @@ Lecture 8: Array - a collection of homogenous objects
 
     This is due to how close memory locations are to each other depending on how array is stored and which element you access. 
 
+
+    C strings and null terminator:
+
+        A char array, a sequnce of chars, can be represented not as a normal array but as a C-string.
+
+        Programmatically, it is a 1D array with a end-marker '\0'. 
+
+        For a string of lenghth N, add '\0' as the N+1th element of the char array.
+
+        That way, you do not have to pass the size of a char array all the time. 
+
+        "hkust" = 'h' 'k' 'u' 's' 't' '\0' 
+
+
+        Outputting sizeof("SULTAN") results in 7. Outputting sizeof("") returns 1. Becayse of the null character. 
+
+        A for loop can be given a condition to check characters in an array until it meets a null character. 
+
+        someFunction(const char s[][16])
+
+
+
+    cin, cin.getline(), cin.gcount():
+        cin skips all white spaced before reading data of the required type until it sees the next white spice (' ', '\n', '\t')
+
+        for char x; cin >> x; and intput "    hkust   " x is going to be just 'h' 
+
+        Same is true for reading a C string. 
+
+        for char x[20]; cin >> x; inputting "   hkust  " will input only "hkust"
+
+        cin is not good for reading multiple words, sentences, paragraphs
+
+        Instead, use cin.getline(char s[], int max-num-char, char terminator);
+
+        cin.getline() stops when either (max-num-char - 1) characters are read OR the terminating character is seen. 
+
+        The terminating character is removed from the input stream but is NOT read into the string.
+
+        Note that strlen does not count the terminating character.
+
+        MEMORIZE:
+            while(cin.getlin(whole_line, MAX_LINE_LEN + 1, '\n') || cin.gcount () == MAX_LINE_LEN){....; cin.clear();}
+
+
+
+
+Lecture 9: Recursion
+
+    Examples of problems that can be solved with recursion: Tower of Hanoi, Factorialfunction, Fibonacci, Polyline.
+
+    Recursive solutions might not be a good idea as many resursive problems sould be solved with straightforward, robust for-loops.
+
+    Recursive functions might also be computationally inefficient as they often perform same sets of operations during rercursive loops.
+
+    But you might still want to use a recursive solution as it might be easier to write and read. 
+
+    I don't really understand how Tower of Hanoi solution works. 
+
+    Binary search:
+
+        You want to find a number within an array. Imagine that array is sorted: numbers are increasing. 
+
+        A regular for loop that goes through array's elements sequentially has a linear time complexity. 
+
+        For binary search, you check if the element in the middle is what we want. If it is too big, then the element must be in the first half of the array (as it is sorted). If the middle element is too small, then the element we want is in the right half. So we keep checking the middle element a subarray.
+
+        The result is an algorithm with logarithmic time complexity. 
+
+
+    Segmentation fault is a common error when working with arrays that is caused by using index out of array's bounds and accessing memory that does not belong to you.
+
+    You can think of recursion as a smaller part of oneself being embedded in itself.
+
+    Recursion might be a good solution for problems of recusrive nature.
+
+    For recursion, the computer has to memorize its current state, and pass the control from hte caller to the callee.  It laso has to set up a new data structure called activation record which contains information about the caller, actual parameters, new local variables, etc.
     
+    Recursion takes more memory and computational time.
