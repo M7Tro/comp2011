@@ -510,3 +510,84 @@ Lecture 9: Recursion
     For recursion, the computer has to memorize its current state, and pass the control from hte caller to the callee.  It laso has to set up a new data structure called activation record which contains information about the caller, actual parameters, new local variables, etc.
     
     Recursion takes more memory and computational time.
+
+
+
+
+
+Lecture 10: Scope
+
+    Scope - region of code where an identifier declaration is active. 
+
+    Global scope (also file scope) - declaration outside of any function.
+
+    Local scope (function or block) - identifier declared inside a function/block(for, while, if)
+
+    Unlike local variables, global variables are given default value of 0 if not initialized.
+
+    In C++, all functions are global. All function identifiers have file scope. 
+
+    Function scope is local. Includes identifiers from formal list and body. Short-lived. Created when function is entered, destroyed when function is returns.
+
+    Block scope is also local. For, while, do-while, if, else, switch, etc. Also short-lived: created when the block is entered, deleted when lock is finished. 
+
+    There are also namespace scope and class scope that are not discussed in the course. 
+
+    The scope has two implications: an idenfitier can only be used once in the same scope (even if data types are different) and same identifiers can be used several times if each has a different scope. In th latter case, the innermost scope will be used to associate identifier with its value. 
+
+
+
+
+
+Lecture 11: struct
+
+    A structure is a collection of heterogenous objects. 
+
+    C++ allows you to define a new user-defined data type using keyword "struct".
+
+    struct StructName {int memberOne; char memberTwo;}; 
+
+    Each object in a struct is called a member. 
+
+    Structs are usually defined globally. 
+
+    You can access a member of a struct instance with dot . notation: structName.memberOne = 123;
+
+    You can perform struct-struct assignment: structName a = {...}; structName b; b = a; 
+
+    Or you can do memberwise copy: b.memberOne = a.memberOne;
+
+    Even a member array can be copied. 
+
+    You can initialize a struct variable with an initializer list in braces:
+        structName a = { valueOne, valueTwo, ...};
+
+    When passing a struct variable in the formal list, it is often required to use a refernce to modify the original variable: void initStruct (structName& structVar, int memberOne, ...){...}
+
+    Members of a struct type can even be structs or enumerations.
+
+    enum Dept {CSE, MATH, ELEC}; struct structName{Dept dept;};
+
+    You can use strcpy(x.stringMember, stringValue); to copy some string value into a string member of a struct. 
+
+    You can access values nested within struct using dot . operator successively:
+        a.date.month
+
+    Initialize a struct using braces:
+        StudentRecord Robert = {"Robert", 21, MALE, 3.6, {2003, 12, 16}};
+
+    Or you can initialize with a function that declares a reference to the passed struct variable.
+
+    You can also define an array of structures:
+        StudentRecord journalFallSemester [] = { {...}, {...}, {...}, ... }
+
+    You can determine the number of entries in an array of struct using sizeof twise:
+        sizeof(structArray)/sizeof(structName)
+
+    cout.width(12) specifies the minimum width of the output in characters. 
+
+    You can define a function with a return type of the struct, to modify the struct usign the function: (even using dot operator)
+        StructName& modify (StructName& structVar, ...){...; return structVar}
+        modify(structVar).memberOne = memberOneValue;
+
+    
