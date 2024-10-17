@@ -591,3 +591,8 @@ Lecture 11: struct
         modify(structVar).memberOne = memberOneValue;
 
     
+
+
+Lecture 12: function
+
+    

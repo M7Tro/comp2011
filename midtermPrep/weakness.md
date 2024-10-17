@@ -1,5 +1,6 @@
 file for writing down topics where I feel fear:
 
+type conversion. Narrowind, widening conversion. Standard type conversion.
 
 File IO
 
