@@ -10,7 +10,7 @@ int fibonacci (int n) { //Notice that the function is int return-type to use it 
     }else{
         return fibonacci(n - 1) + fibonacci (n - 2);
     }
-}
+} 
 
 int main () {
 
