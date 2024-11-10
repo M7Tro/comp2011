@@ -53,3 +53,8 @@ What is a Pointer?
 
     You can get the content of a variable that the pointer poitns to using the dereference operator *:
         int x = 10; int* y = &x; z = *y; 
+
+
+On Stackoverflow, people actually say to not use pointers unless  there is nothing else you can use. 
+
+You can also use pointers with instead of arrays in a strange way like this: char* = "Hello world"; It is a pointer that points to a string literal. 
