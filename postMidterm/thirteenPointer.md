@@ -58,3 +58,30 @@ What is a Pointer?
 On Stackoverflow, people actually say to not use pointers unless  there is nothing else you can use. 
 
 You can also use pointers with instead of arrays in a strange way like this: char* = "Hello world"; It is a pointer that points to a string literal. 
+
+From a YouTube video on the importance of learnign pointers: 
+
+    Pointers are one of the most difficult subjects in programming. 
+
+    Why would you need to see what is located at the memory address of a variable, if you already have the variable at this address? Can't you just look at the variable? 
+
+    Think about the binary number system. You need to understand it to know how ASCII encoding works. 
+
+    Same with pointers. If you know pointers, you would be able to create programs that you otherwise would not be able to write. 
+
+    If you are reading this on a monitor, it updates itself probably 60 times per second. 
+
+    Every time the monitor redraws itself, a pointer it scannign through the video memory and replaces it with video data. This is what makes the screen change. Pointers are almost always involved in software that requries change/refresh/redraw of a screen. 
+
+    Some data structures require a pointer. Pointers are the only way to see and understand data that is greater than a few bytes in size. 
+
+    Pointers let you read and manipulate data in memory which is larger and more complex than a simple data type. 
+
+    When should you NOT use pointers? 
+
+
+A pointer can point to objects of basic types, objects of user-defined types, another pointer or even a funciton. 
+
+Again, what is the difference between the pointer and a reference variable? 
+
+To print the address of a variable use the ampersand & symbol. 
