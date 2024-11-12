@@ -85,3 +85,29 @@ A pointer can point to objects of basic types, objects of user-defined types, an
 Again, what is the difference between the pointer and a reference variable? 
 
 To print the address of a variable use the ampersand & symbol. 
+
+Of course, it is also possible to define a constant pointer. When defined, it must be initialized. Once initialized, a const pointer cannot be changed to point to something else. However, you can change the content in the address it points to.
+
+A type* const pointer lets you change the content of a variable it points to, but not the address. 
+
+A const type* pointer lets you change address the pointer is pointing to but not the content of a variable. 
+
+int* const x = constant address
+
+const int* x = constant value for a given address. A pointer to a const object does not have to be initialized when defined. 
+
+You can combine inchangeable address and inability to change value with: const int* const p; 
+
+What is interesting is that in C, the only way to pass arguments to a function is through PBV (pass by value). To implement passing by reference, without using reference variables like in C++, one may pass the address of an object to a function. Inside the function, the object is represented by a pointer. Then one may change the object's value by dereferencing the object's pointer inside the function. 
+
+Common Uses of Pointer: 
+
+    Indirect addressing (anchor text)
+
+    Dynamic object creation/deletion
+
+    Advanced uses that are not covered in the course: writing generic functions that can work on any data type, implementation of object-oriented technologies such as inheritance nad polymorphism 
+
+Part 3: Pointer to Structure 
+
+    
