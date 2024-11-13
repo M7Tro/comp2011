@@ -102,4 +102,8 @@ Default function argument:
 
         Here, the default terminator is the newline character 
 
-        
+    The -> operator is used to access class, structure or union members using a pointer. 
+
+    The -> operator dereferences the pointer and accesses the member. Same as (*ptr).
+
+    
