@@ -110,4 +110,24 @@ Common Uses of Pointer:
 
 Part 3: Pointer to Structure 
 
-    
+    You can pass a pointer to a structure like this: &studentRecord.
+
+    And then you can use it with an arrow operator: studentRecord -> nameOfStudent or cooridnate -> x 
+
+Part 4: Dynamic Memory/Objects Allocation and Deallocation 
+
+    Normally, you create static objects. Their memory is allocated by the compiler during compilation. 
+
+    What if you have an object whose memory is unknown until a user specifies it during runtime? 
+
+    C++ allows you to create dynamic objects - on-the-fly at runtime. 
+
+    The memory of dynamic objects has to be allocated at runtime explicitly by you using the operator new
+
+    The memory of dynamic objects will persist even after the object goes out of scope???
+
+    Memory of a dynamic object must be deallocated at runtime explicitly by you using the operator delete
+
+    Static objects are manaded using a data structure called stack.
+
+    Dynamic objects are managed using a data structure called heap. 
