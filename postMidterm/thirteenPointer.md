@@ -131,3 +131,4 @@ Part 4: Dynamic Memory/Objects Allocation and Deallocation
     Static objects are manaded using a data structure called stack.
 
     Dynamic objects are managed using a data structure called heap. 
+    dsfsdf
